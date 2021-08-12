@@ -13,7 +13,13 @@ function List() {
                   ... lists, text
                ]) 
             }}/>
-            <AddList lists={lists}/>
+            <AddList
+                lists={lists}
+                onDelete={(list) => {
+                    setLists(lists.filter((e)=>e!==list))
+                }}
+                
+            />
         </div>
     )
 

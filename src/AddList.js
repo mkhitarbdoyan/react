@@ -1,11 +1,20 @@
-function AddList({ lists }) {
+import ListItem from './ListItm'
+
+
+function AddList({ lists,onDelete }) {
     return (
         <div>{
-            lists.map((list) => {
+            lists.map((list,i) => {
                 return (
-                    <div kay={list}>
-                        {list}
-                    </div>
+                    // // <div kay={list}>
+                    //     {/* {list} */}
+                    //     {/* <button onClick={}>X</button> */}
+                    // {/* </div> */}
+
+                    <ListItem
+                        list={list}
+                        onDelite={onDelete}
+                        key={i} />
                 )
             })
         }
